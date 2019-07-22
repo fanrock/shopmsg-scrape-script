@@ -1,6 +1,6 @@
 ShopMessage Assignment for creating Scraping Script
 ==========================================
-Implement a node.js based Shopify store product scraper. The goal of this project is to find information about all the products on a given site (https://www.puravidabracelets.com). 
+Implement a node.js based Shopify store product and inventory scraper. The goal of this project is to find information about all the products on a given site (for example: https://www.puravidabracelets.com). 
 
 Results should be outputted in a .csv file.
 Columns:
@@ -8,10 +8,11 @@ Columns:
   - product_title
   - variant_id
   - variant_title
+  - variant_price
   - inventory_quantity
   - captured_timestamp
 
-We should be able to invoke your program through something like:
+We should be able to invoke your program through the command line like:
 ```
 $> node scrapeInventory.js --site www.puravidabracelets.com --file outfile.csv
 ```
@@ -25,7 +26,7 @@ Products Endpoint:
 i.e.
 `https://www.puravidabracelets.com/products.json` 
 
-Paginate with `page` param
+Paginate with `page` param, e.g. `.../products.json?page=2`, `.../products.json?page=3`, and so on.
 
 
 Product Details Endpoint
@@ -40,6 +41,4 @@ Deliverables
 ------------
 **Code** - Upload your code to your own personal github account and send us a link to your completed implementation when finished.
 
-**Deployment** - _optional_ If you have an account, upload your build to [Heroku](https://www.heroku.com/) or similar cloud hosting provider and send us a link. There is a [free tier](https://www.heroku.com/pricing#heroku-dyno-free) available so you should not have to pay. Make sure to set your `NODE_ENV=production` environment variable in the production environment. 
-
-**Screencast** - Our team really values communication! Please make a screencast where you show us the functionality you implemented. This can be quick (no more than 5 minutes) and casual. If you don't have a tool you currently use to make screencasts, we recommend you use [Loom](https://www.useloom.com/) to make the screencast. It's free and easy to use.
+**Screencast** - Our team really values communication! Please make a screencast where you discuss the implementation you chose and how you've structured your code. This can be quick (no more than 5 minutes) and casual. If you don't have a tool you currently use to make screencasts, we recommend you use [Loom](https://www.useloom.com/) to make the screencast. It's free and easy to use.
